@@ -2,14 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
-    <title>WIP</title>
-</head>
-<body>
-    <div class="dunder">
+    <title>Catalogo</title>
+</head>    
 
-    </div>
+<body>
+    <div class="navbar" >
+        <img class = "cover"src="Imagenes/logo.png" class="logo">
+        <img class = "cart" src="Imagenes/cart.jpg" alt="carrito">
+        <div class="cart-container" id="cart-container">
+            <div class="cart-content">
+                <span class="close" onclick="toggleCart()">×</span>
+                <h2>Carrito</h2>
+                <ul id="cart-items"></ul>
+                <div id="total">Total: $0.00</div>
+                <button onclick="clearCart()">Vaciar Carrito</button>
+            </div>
+        </div>
+        <nav>
+           <ul>
+             <li><a href="index.html"> Inicio</a></li>
+             <li><a href="Catalogo.html"> Catalogo</a></li>
+             <li><a href="AboutUs.html"> Sobre Nosotros</a></li>
+           </ul>
+        </nav>
+        <img src="Imagenes/menu.png" class="menuIcono">
+    </div>  
+</div>
+    <div class="GridLayout">
+        <div class="tj1">
+            <img class = "tapavinilo " src="Imagenes/liquid.png" alt="Liquid swords">
+            <div class="infovinilo">
+                <button class="AgregarCarrito" onclick="AgregarCarrito('Liquid Swords','50000')">Agregar al carrito</button>
+                <h3>Liquid Swords</h3>
+                <p>GZA</p>
+                <p>1995</p>
+                <p>50.000$</p>
+            </div>
+        </div>
+        <div class="tj2">
+            <img class = "tapavinilo " src="Imagenes/nas.jpg" alt="Illmatic">
+            <div class="infovinilo2">
+                <button class="AgregarCarrito" onclick="AgregarCarrito('Illmatic','50000')">Agregar al carrito</button>
+                <h3>Illmatic</h3>
+                <p>Nas</p>
+                <p>1994</p>
+                <p>50.000$</p>
+            </div>
+        </div>
+        <div class="tj3">
+            <img class = "tapavinilo" src="Imagenes/codes.png" alt="Cheat Codes">
+            <div class="infovinilo">
+                <button class="AgregarCarrito" onclick="AgregarCarrito('Cheat Codes','50000')">Agregar al carrito</button>
+                <h3>Cheat Codes</h3>
+                <p>Black Thought & Danger Mouse</p>
+                <p>2022</p>
+                <p>50.000$</p>
+            </div>
+        </div>
+        <div class="tj4">
+            <img class = "tapavinilo" src="Imagenes/wish.png" alt="Wish You Were Here">
+            <div class="infovinilo">
+                <button class="AgregarCarrito" onclick="AgregarCarrito('Wish You Were Here','50000')">Agregar al carrito</button>
+                <h3>Wish You Were Here</h3>
+                <p>Pink Floyd</p>
+                <p>1975</p>
+                <p>50.000$</p>
+            </div>
+        </div>
+        <div class="tj5">
+            <img class = "tapavinilo" src="Imagenes/king.jpg" alt="In the court of the crimson king">
+            <div class="infovinilo">
+                <button class="AgregarCarrito" onclick="AgregarCarrito('In The Court Of The Crimson King','50000')">Agregar al carrito</button>
+                <h3>In the Court of the Crimson King</h3>
+                <p>King Crimson</p>
+                <p>1969</p>
+                <p>50.000$</p>
+            </div>
+        </div>  
+        <div class="tj6">
+            <img class = "tapavinilo" src="Imagenes/hendrix.jpg" alt="are you experienced">
+            <div class="infovinilo">
+                <button class="AgregarCarrito" onclick="AgregarCarrito('Are You Experienced','50000')">Agregar al carrito</button>
+                <h3>Are You Experienced</h3>
+                <p>The Jimi Hendrix Experience</p>
+                <p>1967</p>
+                <p>50.000$</p>
+            </div>
+        </div>
+        <div class="tj7">
+            <img class = "tapavinilo" src="Imagenes/astro.png" alt="Astroworld">
+            <div class="infovinilo">
+                <button class="AgregarCarrito" onclick="AgregarCarrito('AstroWorld','50000')">Agregar al carrito</button>
+                <h3>AstroWorld</h3>
+                <p>Travis Scott</p>
+                <p>2018</p>
+                <p>50.000$</p>
+            </div>
+        </div>
+        <div class="tj8">
+            <img class = "tapavinilo" src="Imagenes/blue.jpg" alt="Kind Of Blue">
+            <div class="infovinilo">
+                <button class="AgregarCarrito" onclick="AgregarCarrito('Kind Of Blue','50000')">Agregar al carrito</button>
+                <h3>Kind Of Blue</h3>
+                <p>Miles Davis</p>
+                <p>1959</p>
+                <p>50.000$</p>
+            </div>
+        </div>
+
+        <div class="tj9"><img class = "tapavinilo" src="Imagenes/mad.jpg" alt="Madvillainy">
+            <div class="infovinilo">
+                <button class="AgregarCarrito" onclick="AgregarCarrito('Madvillainy')">Agregar al carrito</button>
+                <h3>Madvillainy</h3>
+                <p>Madvillain</p>
+                <p>2004</p>
+                <p>50.000$</p>
+            </div>
+        </div>
+    <div class="container"></div>    
+    
+        </div>
+
+
     
 </body>
 </html>
