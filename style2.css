@@ -1,7 +1,156 @@
-.dunder {
-    width: 1000px;;
-    height:1000px;
-    background-image:url(Imagenes/6wh9ir9jorm91.jpg);
-    background-position: center;
-    background-size: cover;
+
+.navbar{
+    height:12%;
+    display:  flex;
+    align-items:center;
+}
+.Fondo{
+    margin: 0;
+    padding: 0;
+    width: 100%
+    
+}
+.logo{
+    width:50px; 
+    cursor:pointer;
+
+}
+
+.menuIcono{
+    width: 30px;    
+    cursor:pointer;
+    margin-left: 40px;
+}
+
+nav{
+    flex:1;
+    text-align: right;
+
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:rgb(0,0, 0);
+    
+}
+
+  
+body {
+    margin: 0;
+    padding: 20px; 
+    box-sizing: border-box;
+  }
+
+.GridLayout {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2% 1%;
+    grid-auto-flow:auto row ;
+    grid-template-areas:
+        "tj1 tj2 tj3"
+        "tj4 tj5 tj6"
+        "tj7 tj8 tj9";
+  }
+
+
+
+
+.tapavinilo{
+    text-align: center;
+}
+.tj1 { 
+    border: 2px;
+    border-style: double;
+    border-color: black;
+    grid-area: tj1;
+    border-radius: 1%;
+    text-align: center;}
+
+    .infovinilo{
+        text-align: center;
+    }
+
+
+.tj2 {
+    border: 2px;
+    border-style: double;
+    border-color: black;
+    grid-area: tj2;
+    border-radius: 1%; 
+    text-align: center;
+}
+  
+  .tj3 { grid-area: tj3;
+        border: 2px;
+        border-style: double;
+        border-color: black;
+        border-radius: 1%;
+        text-align: center; }
+  
+  .tj4 { grid-area: tj4;
+    border: 2px;
+    border-style: double;
+    border-color: black;
+    border-radius: 1%;
+    text-align: center; }
+  
+  .tj5 { grid-area: tj5;
+    border: 2px;
+    border-style: double;
+    border-color: black;
+    border-radius: 1%;
+    text-align: center; }
+  
+  .tj6 { grid-area: tj6;
+        border: 2px;
+        border-style: double;
+        border-color: black;
+        border-radius: 1%;
+        text-align: center; }
+  
+  .tj7 { 
+        grid-area: tj7;
+        border: 2px;
+        border-style: double;
+        border-color: black;
+        border-radius: 1%;
+        text-align: center; }
+  
+  .tj8 { grid-area: tj8;
+    border: 2px;
+    border-style: double;
+    border-color: black;
+    border-radius: 1%;
+    text-align: center; }
+  
+  .tj9 { grid-area: tj9;
+    border: 2px;
+    border-style: double;
+    border-color: black;
+    border-radius: 1%;
+    text-align: center; }
+  
+.infovinilo{
+    border: 1px;
+    border-color: black;
+}
+
+.AgregarCarrito {
+
+            position: center; 
+            background-color: #044b20;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;}
+
+.cart{
+    size: 5px;
+    align-items: right;
 }
