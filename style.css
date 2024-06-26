@@ -1,5 +1,5 @@
 *{
-    margin:0;
+    margin:0; 
     padding:0;
     font-family: 'Roboto', 'sans-serif'
 }
@@ -17,12 +17,13 @@
     background-size:cover;
     margin:0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
     
     box-sizing: border-box;
     
 
 }
-
 .navbar{
     height:12%;
     display:  flex;
@@ -62,7 +63,6 @@ nav ul li a{
     flex-wrap: wrap;
     height:88%;
     align-items:center;
-         
 }
 .col{
     flex-basis: 50%;
@@ -136,6 +136,7 @@ h5{
 .addons{
     background: linear-gradient(90deg, rgba(142,112,92,1) 0%, rgba(55,25,11,1) 41%, rgba(198,224,174,1) 100%);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px;
     width: 100%;
@@ -166,6 +167,14 @@ testing ul li{
     margin-bottom: 10px;
 }
 
+.testing iframe {
+    max-width: 90%;
+}
+
+
+.ul{
+    list-style-type: none;
+}
 @media only screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
