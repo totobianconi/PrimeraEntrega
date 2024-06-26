@@ -1,38 +1,55 @@
-
-
+let cart = {};
 
 function toggleCart() {
-    var cartContainer = document.getElementById("cart-container");
-    if (cartContainer.style.display === "none" || cartContainer.style.display === "") {
-        cartContainer.style.display = "block";
-    } else {
-        cartContainer.style.display = "none";
-    }
+    const cartContainer = document.getElementById("cart-container");
+    cartContainer.style.display = cartContainer.style.display === "none" || cartContainer.style.display === "" ? "block" : "none";
 }
-
 
 function AgregarCarrito(itemName, itemPrice) {
-    
-    var li = document.createElement("li");
-    li.textContent = itemName + " - $" + itemPrice;
-
-    
-    document.getElementById("cart-items").appendChild(li);
-
-    
-    updateTotal(parseFloat(itemPrice));
+    if (!cart[itemName]) {
+        cart[itemName] = { price: parseFloat(itemPrice), quantity: 1 };
+    } else {
+        cart[itemName].quantity += 1;
+    }
+    updateCart();
 }
 
+function updateCart() {
+    const cartItems = document.getElementById("cart-items");
+    cartItems.innerHTML = "";
+    let total = 0;
 
-function updateTotal(itemPrice) {
-    var totalElement = document.getElementById("total");
-    var currentTotal = parseFloat(totalElement.textContent.replace("Total: $", ""));
-    var newTotal = currentTotal + itemPrice;
-    totalElement.textContent = "Total: $" + newTotal.toFixed(2);
+    for (const item in cart) {
+        const cartItem = cart[item];
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${item} - $${(cartItem.price * cartItem.quantity).toFixed(2)}
+            <select onchange="updateItemQuantity('${item}', this.value)">
+                ${Array.from({length: 11}, (_, i) => `<option value="${i}" ${i === cartItem.quantity ? 'selected' : ''}>${i}</option>`).join('')}
+            </select>
+        `;
+        cartItems.appendChild(li);
+        total += cartItem.price * cartItem.quantity;
+    }
+
+    document.getElementById("total").textContent = "Total: $" + total.toFixed(2);
+
+    const hiddenMessage = document.getElementById("cart-container");
+    hiddenMessage.style.display = "block";
 }
 
-o
+function updateItemQuantity(itemName, quantity) {
+    cart[itemName].quantity = parseInt(quantity);
+    if (cart[itemName].quantity === 0) {
+        delete cart[itemName];
+    }
+    updateCart();
+}
+
 function clearCart() {
-    document.getElementById("cart-items").innerHTML = "";
-    document.getElementById("total").textContent = "Total: $0.00";
+    cart = {};
+    updateCart();
 }
+
+
+////hola 
