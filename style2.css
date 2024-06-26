@@ -1,156 +1,142 @@
-
-.navbar{
-    height:12%;
-    display:  flex;
-    align-items:center;
-}
-.Fondo{
-    margin: 0;
+body {
     padding: 0;
-    width: 100%
-    
-}
-.logo{
-    width:50px; 
-    cursor:pointer;
-
+    margin: 0;
 }
 
-.menuIcono{
-    width: 30px;    
-    cursor:pointer;
+.navbar {
+    height: 12%;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.menuIcono {
+    cursor: pointer;
     margin-left: 40px;
 }
 
-nav{
-    flex:1;
+nav {
+    flex: 1;
     text-align: right;
-
 }
-nav ul li{
+
+nav ul {
+    padding: 0;
+    margin: 0;
     list-style: none;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
     margin-left: 30px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
-    color:rgb(0,0, 0);
-    
+    color: rgb(0, 0, 0);
 }
 
-  
 body {
     margin: 0;
-    padding: 20px; 
+    padding: 20px;
     box-sizing: border-box;
-  }
+}
 
-.GridLayout {  display: grid;
+.GridLayout {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     gap: 2% 1%;
-    grid-auto-flow:auto row ;
-    grid-template-areas:
-        "tj1 tj2 tj3"
-        "tj4 tj5 tj6"
-        "tj7 tj8 tj9";
-  }
+}
 
+.tapavinilo {
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
 
-
-
-.tapavinilo{
+.tj1, .tj2, .tj3, .tj4, .tj5, .tj6, .tj7, .tj8, .tj9 {
+    border: 2px double black;
+    border-radius: 1%;
     text-align: center;
 }
-.tj1 { 
-    border: 2px;
-    border-style: double;
-    border-color: black;
-    grid-area: tj1;
-    border-radius: 1%;
-    text-align: center;}
 
-    .infovinilo{
-        text-align: center;
-    }
-
-
-.tj2 {
-    border: 2px;
-    border-style: double;
-    border-color: black;
-    grid-area: tj2;
-    border-radius: 1%; 
+.infovinilo {
     text-align: center;
-}
-  
-  .tj3 { grid-area: tj3;
-        border: 2px;
-        border-style: double;
-        border-color: black;
-        border-radius: 1%;
-        text-align: center; }
-  
-  .tj4 { grid-area: tj4;
-    border: 2px;
-    border-style: double;
-    border-color: black;
-    border-radius: 1%;
-    text-align: center; }
-  
-  .tj5 { grid-area: tj5;
-    border: 2px;
-    border-style: double;
-    border-color: black;
-    border-radius: 1%;
-    text-align: center; }
-  
-  .tj6 { grid-area: tj6;
-        border: 2px;
-        border-style: double;
-        border-color: black;
-        border-radius: 1%;
-        text-align: center; }
-  
-  .tj7 { 
-        grid-area: tj7;
-        border: 2px;
-        border-style: double;
-        border-color: black;
-        border-radius: 1%;
-        text-align: center; }
-  
-  .tj8 { grid-area: tj8;
-    border: 2px;
-    border-style: double;
-    border-color: black;
-    border-radius: 1%;
-    text-align: center; }
-  
-  .tj9 { grid-area: tj9;
-    border: 2px;
-    border-style: double;
-    border-color: black;
-    border-radius: 1%;
-    text-align: center; }
-  
-.infovinilo{
-    border: 1px;
-    border-color: black;
 }
 
 .AgregarCarrito {
-
-            position: center; 
-            background-color: #044b20;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;}
-
-.cart{
-    size: 5px;
-    align-items: right;
+    position: center;
+    background-color: #044b20;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+.cart-container {
+    background-color:wheat;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cart-container h2, .cart-container #total, .cart-container button {
+    margin-right: 20px;
+}
+
+select {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .GridLayout {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items:flex-end;
+        width:100%;
+        margin-left:333%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .cart-container {
+        width: 90%;
+        
+    }
+
+    .tapavinilo {
+        width: 100%;
+        height: auto;
+    }
+    
+    .tj1, .tj2, .tj3, .tj4, .tj5, .tj6, .tj7, .tj8, .tj9 {
+        width: 100%;
+    }
+}
+
+
